@@ -1,0 +1,318 @@
+html {
+    scroll-behavior: smooth; /* Płynne przewijanie przy kliknięciu w linki */
+}
+
+body {
+    background-image: url('tlo.jpg');   
+    height: 100%;
+    background-size: cover;            
+    background-position: center;       
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+}
+
+a {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 1; 
+    transform: scale(1.2);
+}
+
+.menu {
+    background-color: rgb(0, 0, 0); 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
+    align-items: center; 
+}
+
+.menu .menu-items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu .menu-items li {
+    margin-right: 20px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border: 1px solid rgb(255, 255, 255); 
+    border-radius: 5px; 
+}
+
+.cv-button {
+    background-color: rgba(255, 204, 51, 0.46); 
+    margin-right: 20px; 
+}
+
+.full-screen-section {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.full-screen-section h1 {
+    font-size: 200px;
+    margin-bottom: 350px;
+    animation: changeColorName 7.5s infinite alternate linear;
+    font-family: 'Miltonian', cursive;
+}
+
+@keyframes changeColorName{
+    0% { color: rgba(85, 202, 238, 1); }
+    100% { color: rgba(137, 18, 216, 1); }
+}
+
+.color-changing-panel {
+    width: 552px;
+    height: 130px;
+    position: absolute;
+    top: 75%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    z-index: 10; 
+    animation: changeColorIkon 10s infinite alternate linear;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes changeColorIkon {
+    0% { background-color: rgba(137, 18, 216, 0.5); }
+    100% { background-color: rgba(85, 202, 238, 0.5); }
+}
+
+.social-links {
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.social-links img {
+    width: 78px; 
+    height: 78px; 
+}
+
+/* O MNIE*/
+.about-me-section {
+    background-color: rgba(0, 0, 0, 0.75); 
+    width: 100%;
+    transform: translateX(-2.5%);
+    padding: 50px;
+    margin-top: 20px; 
+    color: white; 
+}
+
+.neon-text-about {
+    font-family: 'Vampiro One', cursive;
+    animation: neonBlue 10s ease-in-out infinite normal;
+    text-align: center;
+    color: white;
+    font-size: 45px; 
+}
+
+.about-me-section p {
+    text-align: center; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 150px;
+}
+
+/* --- */
+
+.skills-section {
+    background-color: rgba(0, 0, 0, 0.75); 
+    width: 100%;
+    transform: translateX(-2.5%);
+    padding: 50px;
+}
+
+.neon-text-V {
+    font-family: 'Vampiro One', cursive; 
+    animation: neonViolet 1.5s ease-in-out infinite alternate;
+    text-align: center;
+    color: white;
+    font-size: 45px; 
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    gap: 30px;
+}
+
+.skill {
+    background-color: rgba(51, 51, 51, 0.5); 
+    border-radius: 25px;
+    margin: 15px 15px;
+    padding: 20px;
+    width: 250px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: box-shadow 0.5s ease, transform 0.75s ease;
+}
+
+.skill-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.skill-level {
+    display: flex;
+    justify-content: center;
+}
+
+.skill-level .fa-star {
+    color: #ccc;
+    margin: 0 2px;
+}
+
+.skill-level .fa-star.filled {
+    color: gold;
+    
+}
+
+.skills-subheading {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+
+.skills-gap {
+    height: 50px;
+}
+
+/* --- */
+
+.interests-section {
+    color: white;
+    font-size: 26px;
+    margin-top: 250px;
+    text-align: center;
+}
+
+.neon-text-interests {
+    font-family: 'Vampiro One', cursive;
+    animation: neonYellow 2.5s ease-in-out infinite alternate;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.interest {
+    background-color: #67019a59;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.interest:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ---------- NEON`s ----------*/
+@keyframes neonBlue {
+    0% {
+      text-shadow: 
+        0 0 5px #228dff, 
+        0 0 10px #228dff, 
+        0 0 15px #228dff, 
+        0 0 20px #228dff,
+        0 0 20px transparent,
+        -3000px 0 20px #228dff;
+    }
+    20% {
+      text-shadow: 
+        0 0 10px #228dff, 
+        0 0 20px #228dff, 
+        0 0 30px #228dff, 
+        0 0 40px #228dff,
+        0 0 20px transparent,
+        -3000px 0 20px #228dff;
+    }
+    70% {
+      text-shadow: 
+        0 0 400px transparent, 
+        0 0 450px transparent, 
+        0 0 500px transparent, 
+        0 0 550px transparent,
+        3000px 0 20px #228dff,
+        0 0 20px #228dff;
+    }
+    80% {
+        text-shadow: 
+        0 0 5px transparent, 
+        0 0 15px transparent, 
+        0 0 20px transparent, 
+        0 0 25px transparent,
+        3000px 0 0px #228dff,
+        0 0 20px #228dff;
+    }
+    100% {
+        text-shadow: 
+        0 0 5px #228dff, 
+        0 0 10px #228dff, 
+        0 0 15px #228dff, 
+        0 0 20px #228dff,
+        3000px 0 0px transparent,
+        0 0 20px transparent;
+    }
+}
+
+@keyframes neonViolet {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de;
+      }
+      to {
+        text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #ff00de, 0 0 10px #ff00de;
+      }
+}
+
+@keyframes neonYellow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ffdd1b, 0 0 70px #ffdd1b;
+    }
+    to {
+      text-shadow: 0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+    }
+}
