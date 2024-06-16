@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Ukrycie poziomego paska przewijania */
+    overflow-x: hidden;
 }
 
 a {
@@ -36,7 +36,7 @@ a:hover {
     justify-content: space-between;
     padding: 10px;
     align-items: center;
-    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+    box-sizing: border-box;
 }
 
 .menu .menu-toggle {
@@ -124,8 +124,8 @@ h1 {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-    margin-top: 5vh; /* Margines względny od góry */
-    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+    margin-top: 5vh;
+    box-sizing: border-box;
 }
 
 @keyframes changeColorIkon {
@@ -151,7 +151,7 @@ h1 {
     padding: 50px 20px;
     color: white;
     text-align: center;
-    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+    box-sizing: border-box;
     margin-top: 40vw;
 }
 
@@ -219,7 +219,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
     padding: 50px 20px;
-    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+    box-sizing: border-box;
 }
 
 .neon-text-V {
@@ -346,7 +346,6 @@ h1 {
     }
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
     .about-me-section {
         margin-top: 5vw;
@@ -401,14 +400,14 @@ h1 {
     }
 
     .menu a {
-        width: auto; /* Zmiana szerokości linków w menu */
+        width: auto;
         text-align: center;
         border: none;
     }
 
     .cv-button {
-        width: auto; /* Zachowanie oryginalnej szerokości dla przycisku CV */
-        margin: 10px 20px; /* Dostosowanie marginesu, aby wyglądał estetycznie */
+        width: auto;
+        margin: 10px 20px;
     }
 
     #clock {
@@ -428,8 +427,8 @@ h1 {
     }
 
     .social-links img {
-        width: 10vw; /* Zwiększenie szerokości ikon w panelu */
-        height: 10vw; /* Zwiększenie wysokości ikon w panelu */
+        width: 10vw;
+        height: 10vw;
     }
 
     .neon-text-about, .neon-text-V, .neon-text-interests {
@@ -471,14 +470,14 @@ h1 {
     }
 
     .menu a {
-        width: auto; /* Zmiana szerokości linków w menu */
+        width: auto;
         text-align: center;
         border: none;
     }
 
     .cv-button {
-        width: auto; /* Zachowanie oryginalnej szerokości dla przycisku CV */
-        margin: 10px 20px; /* Dostosowanie marginesu, aby wyglądał estetycznie */
+        width: auto;
+        margin: 10px 20px;
     }
 
     #clock {
@@ -498,8 +497,8 @@ h1 {
     }
 
     .social-links img {
-        width: 10vw; /* Zwiększenie szerokości ikon w panelu */
-        height: 10vw; /* Zwiększenie wysokości ikon w panelu */
+        width: 10vw; 
+        height: 10vw;
     }
 
     .neon-text-about, .neon-text-V, .neon-text-interests {
