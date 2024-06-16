@@ -1,14 +1,18 @@
 html {
-    scroll-behavior: smooth; /* Płynne przewijanie przy kliknięciu w linki */
+    scroll-behavior: smooth;
 }
 
 body {
-    background-image: url('tlo.jpg');   
+    background-image: url('tlo.jpg');
     height: 100%;
-    background-size: cover;            
-    background-position: center;       
-    background-repeat: no-repeat;      
-    background-attachment: fixed;      
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Ukrycie poziomego paska przewijania */
 }
 
 a {
@@ -17,21 +21,29 @@ a {
 }
 
 a:hover {
-    opacity: 1; 
+    opacity: 1;
     transform: scale(1.2);
 }
 
 .menu {
-    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 10px;
-    align-items: center; 
+    align-items: center;
+    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+}
+
+.menu .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
 }
 
 .menu .menu-items {
@@ -42,56 +54,78 @@ a:hover {
 }
 
 .menu .menu-items li {
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .menu a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 5px 10px;
-    border: 1px solid rgb(255, 255, 255); 
-    border-radius: 5px; 
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .cv-button {
-    background-color: rgba(255, 204, 51, 0.46); 
-    margin-right: 20px; 
+    background-color: rgba(255, 204, 51, 0.46);
+    margin-right: 20px;
 }
 
 .full-screen-section {
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.full-screen-section h1 {
-    font-size: 200px;
-    margin-bottom: 350px;
+#clock-container {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+#clock {
+    font-family: 'Miltonian', cursive;
+    font-size: 12vw;
+    animation: changeColorName 7.5s infinite alternate linear;
+    font-weight: lighter;
+}
+
+#date {
+    font-family: 'Miltonian', cursive;
+    font-size: 4vw;
+    animation: changeColorName 7.5s infinite alternate linear;
+}
+
+h1 {
+    font-size: 12vw;
+    margin: 0;
     animation: changeColorName 7.5s infinite alternate linear;
     font-family: 'Miltonian', cursive;
+    margin-top: 5vh;
 }
 
-@keyframes changeColorName{
+@keyframes changeColorName {
     0% { color: rgba(85, 202, 238, 1); }
     100% { color: rgba(137, 18, 216, 1); }
 }
 
 .color-changing-panel {
-    width: 552px;
-    height: 130px;
-    position: absolute;
-    top: 75%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 40vw;
+    height: auto;
     border-radius: 25px;
-    z-index: 10; 
+    z-index: 10;
     animation: changeColorIkon 10s infinite alternate linear;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 10px;
+    margin-top: 5vh; /* Margines względny od góry */
+    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
 }
 
 @keyframes changeColorIkon {
@@ -100,157 +134,39 @@ a:hover {
 }
 
 .social-links {
-    width: 100%; 
-    height: 100%;
-    display: flex; 
-    justify-content: space-evenly; 
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .social-links img {
-    width: 78px; 
-    height: 78px; 
+    width: 6vw;
+    height: 6vw;
 }
 
-/* O MNIE*/
 .about-me-section {
-    background-color: rgba(0, 0, 0, 0.75); 
+    background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
-    transform: translateX(-2.5%);
-    padding: 50px;
-    margin-top: 20px; 
-    color: white; 
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+    margin-top: 40vw;
 }
 
 .neon-text-about {
     font-family: 'Vampiro One', cursive;
     animation: neonBlue 10s ease-in-out infinite normal;
-    text-align: center;
     color: white;
-    font-size: 45px; 
+    font-size: 5vw;
 }
 
 .about-me-section p {
-    text-align: center; 
-    font-size: 18px; 
-    line-height: 1.6; 
-    margin-bottom: 150px;
+    font-size: 2.5vw;
+    line-height: 1.6;
 }
 
-/* --- */
-
-.skills-section {
-    background-color: rgba(0, 0, 0, 0.75); 
-    width: 100%;
-    transform: translateX(-2.5%);
-    padding: 50px;
-}
-
-.neon-text-V {
-    font-family: 'Vampiro One', cursive; 
-    animation: neonViolet 1.5s ease-in-out infinite alternate;
-    text-align: center;
-    color: white;
-    font-size: 45px; 
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around; 
-    gap: 30px;
-}
-
-.skill {
-    background-color: rgba(51, 51, 51, 0.5); 
-    border-radius: 25px;
-    margin: 15px 15px;
-    padding: 20px;
-    width: 250px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: box-shadow 0.5s ease, transform 0.75s ease;
-}
-
-.skill-name {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: white;
-}
-
-.skill-level {
-    display: flex;
-    justify-content: center;
-}
-
-.skill-level .fa-star {
-    color: #ccc;
-    margin: 0 2px;
-}
-
-.skill-level .fa-star.filled {
-    color: gold;
-    
-}
-
-.skills-subheading {
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 35px;
-    color: #fff;
-    text-align: center;
-}
-
-.skills-gap {
-    height: 50px;
-}
-
-/* --- */
-
-.interests-section {
-    color: white;
-    font-size: 26px;
-    margin-top: 250px;
-    text-align: center;
-}
-
-.neon-text-interests {
-    font-family: 'Vampiro One', cursive;
-    animation: neonYellow 2.5s ease-in-out infinite alternate;
-    text-align: center;
-    color: white;
-    font-size: 45px;
-}
-
-.interests-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
-}
-
-.interest {
-    background-color: #67019a59;
-    border-radius: 10px;
-    margin: 15px;
-    padding: 20px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-}
-
-.interest:hover {
-    transform: scale(1.1);
-}
-
-
-
-/* ---------- NEON`s ----------*/
 @keyframes neonBlue {
     0% {
       text-shadow: 
@@ -299,13 +215,126 @@ a:hover {
     }
 }
 
+.skills-section {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box; /* Upewnienie się, że padding nie zwiększa szerokości */
+}
+
+.neon-text-V {
+    font-family: 'Vampiro One', cursive;
+    animation: neonViolet 1.5s ease-in-out infinite alternate;
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.skill {
+    background-color: rgba(51, 51, 51, 0.5);
+    border-radius: 25px;
+    margin: 15px 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: box-shadow 0.5s ease, transform 0.75s ease;
+}
+
+.skill-name {
+    margin-bottom: 10px;
+    font-size: 2vw; 
+    color: white;
+}
+
+.skill-level {
+    display: flex;
+    justify-content: center;
+}
+
+.skill-level .fa-star {
+    color: #ccc;
+    margin: 0 2px;
+    font-size: 1.5vw;
+}
+
+.skill-level .fa-star.filled {
+    color: gold;
+    font-size: 1.5vw;
+}
+
+.skills-subheading {
+    font-size: 2vw;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+
+.skills-gap {
+    height: 50px;
+}
+
+.interests-section {
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.neon-text-interests {
+    font-family: 'Vampiro One', cursive;
+    animation: neonYellow 2.5s ease-in-out infinite alternate;
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.interest {
+    background-color: #67019a59;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    font-size: 2vw;
+    color: white;
+}
+
+.interest:hover {
+    transform: scale(1.1);
+}
+
 @keyframes neonViolet {
     from {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de;
-      }
-      to {
+    }
+    to {
         text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #ff00de, 0 0 10px #ff00de;
-      }
+    }
 }
 
 @keyframes neonYellow {
@@ -314,5 +343,179 @@ a:hover {
     }
     to {
       text-shadow: 0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .about-me-section {
+        margin-top: 5vw;
+    }
+    .neon-text-about, .neon-text-V, .neon-text-interests {
+        font-size: 4.5vw;
+    }
+    .about-me-section p, .skill-name, .skills-subheading, .interest {
+        font-size: 2.2vw;
+    }
+    .skill-level .fa-star, .skill-level .fa-star.filled {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .neon-text-about, .neon-text-V, .neon-text-interests {
+        font-size: min(7vw);
+    }
+    .about-me-section p, .skill-name, .skills-subheading, .interest {
+        font-size: min(3vw);
+    }
+    .skill-level .fa-star, .skill-level .fa-star.filled {
+        font-size: min(2vw);
+    }
+    .interest {
+        max-width: 30vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu .menu-toggle {
+        display: block;
+    }
+
+    .menu .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .menu .menu-items.show {
+        display: flex;
+    }
+
+    .menu .menu-items li {
+        margin: 10px 0;
+    }
+
+    .menu a {
+        width: auto; /* Zmiana szerokości linków w menu */
+        text-align: center;
+        border: none;
+    }
+
+    .cv-button {
+        width: auto; /* Zachowanie oryginalnej szerokości dla przycisku CV */
+        margin: 10px 20px; /* Dostosowanie marginesu, aby wyglądał estetycznie */
+    }
+
+    #clock {
+        font-size: 15vw;
+    }
+    
+    #date {
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 15vw;
+    }
+
+    .color-changing-panel {
+        min-width: 60vw;
+    }
+
+    .social-links img {
+        width: 10vw; /* Zwiększenie szerokości ikon w panelu */
+        height: 10vw; /* Zwiększenie wysokości ikon w panelu */
+    }
+
+    .neon-text-about, .neon-text-V, .neon-text-interests {
+        font-size: min(7vw);
+    }
+    .about-me-section p, .skill-name, .skills-subheading, .interest {
+        font-size: min(3vw);
+    }
+    .skill-level .fa-star, .skill-level .fa-star.filled {
+        font-size: min(3vw);
+    }
+
+    .interest {
+        max-width: 50vw;
+    }
+}
+
+@media (max-width: 568px) {
+    .menu .menu-toggle {
+        display: block;
+    }
+
+    .menu .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .menu .menu-items.show {
+        display: flex;
+    }
+
+    .menu .menu-items li {
+        margin: 10px 0;
+    }
+
+    .menu a {
+        width: auto; /* Zmiana szerokości linków w menu */
+        text-align: center;
+        border: none;
+    }
+
+    .cv-button {
+        width: auto; /* Zachowanie oryginalnej szerokości dla przycisku CV */
+        margin: 10px 20px; /* Dostosowanie marginesu, aby wyglądał estetycznie */
+    }
+
+    #clock {
+        font-size: 18vw;
+    }
+    
+    #date {
+        font-size: 8vw;
+    }
+
+    h1 {
+        font-size: 18vw;
+    }
+
+    .color-changing-panel {
+        min-width: 60vw;
+    }
+
+    .social-links img {
+        width: 10vw; /* Zwiększenie szerokości ikon w panelu */
+        height: 10vw; /* Zwiększenie wysokości ikon w panelu */
+    }
+
+    .neon-text-about, .neon-text-V, .neon-text-interests {
+        font-size: min(10vw);
+    }
+    .about-me-section p, .skill-name, .skills-subheading, .interest {
+        font-size: min(5vw);
+    }
+    .skill-level .fa-star, .skill-level .fa-star.filled {
+        font-size: min(5vw);
+    }
+}
+
+@media (max-height: 750px) {
+    .full-screen-section {
+        height: 250vh;
+        max-height: 750px;
     }
 }
