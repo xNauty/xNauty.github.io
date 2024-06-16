@@ -361,7 +361,7 @@ h1 {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
     .neon-text-about, .neon-text-V, .neon-text-interests {
         font-size: min(7vw);
     }
@@ -376,7 +376,7 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 775px) {
     .menu .menu-toggle {
         display: block;
     }
@@ -446,7 +446,7 @@ h1 {
     }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 575px) {
     .menu .menu-toggle {
         display: block;
     }
