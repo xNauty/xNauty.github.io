@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Miltonian&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Karol Syska - Portfolio</title>
 </head>
 <body>
     <div class="menu">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <ul class="menu-items">
             <li><a href="#socialmedia">Media społecznościowe</a></li>
             <li><a href="#about">O Mnie</a></li>
@@ -19,8 +20,12 @@
         </ul>
         <a href="https://drive.google.com/file/d/1TNgR7ppPUmw0OiH8VC2Z2PrSdJBhqDlE/view?usp=sharing" class="cv-button" target="_blank">Moje CV</a>
     </div>
-
+  
     <div class="full-screen-section" id="socialmedia">
+        <div id="clock-container">
+            <div id="clock"></div>
+            <div id="date"></div>
+        </div>
         <h1>Karol Syska</h1>
         <div class="color-changing-panel">
             <div class="social-links">
@@ -35,7 +40,7 @@
 
     <div class="about-me-section" id="about">
         <h2 class="neon-text-about">O Mnie</h2>
-        <p>Mam 25 lat. Jestem aktualnie studentem informatyki.</p>
+        <p>Mam 25 lat. Jestem aktualnie studentem informatyki. :)</p>
     </div>
 
     <!-- Umiejętności -->
